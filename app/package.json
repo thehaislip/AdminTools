@@ -1,0 +1,39 @@
+{
+  "name": "admin-tools",
+  "version": "1.0.0",
+  "description": "Admin-Tools",
+  "author": "",
+  "repository": "",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.4.1",
+    "electron-builder": "^20.4.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "deep-filter": "^1.0.2",
+    "lodash": "^4.17.5",
+    "node-powershell": "^3.3.1",
+    "nosql": "^6.1.0",
+    "vue": "^2.5.13"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "admin-tools",
+    "directories": {
+      "buildResources": "../assets",
+      "output": "../dist"
+    }
+  },
+  "mac": {
+    "category": "admin-tools"
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ]
+  }
+}
