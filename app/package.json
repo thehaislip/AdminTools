@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "clone-deep": "^3.0.1",
     "deep-filter": "^1.0.2",
     "lodash": "^4.17.5",
     "node-powershell": "^3.3.1",
     "nosql": "^6.1.0",
+    "skeleton-css": "^2.0.4",
     "vue": "^2.5.13"
   },
   "scripts": {

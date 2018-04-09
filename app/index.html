@@ -5,6 +5,7 @@
     <base href="./">
     <meta charset="UTF-8">
     <title>Contacts App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" type="text/css" rel="stylesheet" />
     <style>
         nav>div,.icon {
             float: left;
@@ -36,10 +37,6 @@
         .clear {
             clear: both;
         }
-        .webFarm {
-            border: 1px solid grey;
-            width:50%
-        }
         .subNote{
             font-style: italic;
             font-size:10px;
@@ -58,9 +55,10 @@
         }
         .Stop, .Start, .Recycle{
             display: inline-block;
-            height:10px;
-            width:10px;
+            height:15px;
+            width:15px;
             cursor: pointer;
+            margin-right: 3px;
         }
         .Stop{
             background-color: red;
@@ -73,12 +71,15 @@
         .Recycle{
             background-color: yellow;
         }
+        /* .accordianHead{
+
+        } */
     </style>
 </head>
 
 <body>
 
-    <div class="container" id="app">
+    <div id="app">
         <h1>{{title}}</h1>
         <nav>
             <div v-for="item in items" @click="navigate(item)">
