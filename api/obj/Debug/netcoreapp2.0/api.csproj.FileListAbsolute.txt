@@ -1,0 +1,11 @@
+H:\AdminTools\api\bin\Debug\netcoreapp2.0\api.deps.json
+H:\AdminTools\api\bin\Debug\netcoreapp2.0\api.runtimeconfig.json
+H:\AdminTools\api\bin\Debug\netcoreapp2.0\api.runtimeconfig.dev.json
+H:\AdminTools\api\bin\Debug\netcoreapp2.0\api.dll
+H:\AdminTools\api\bin\Debug\netcoreapp2.0\api.pdb
+H:\AdminTools\api\obj\Debug\netcoreapp2.0\api.csprojResolveAssemblyReference.cache
+H:\AdminTools\api\obj\Debug\netcoreapp2.0\api.csproj.CoreCompileInputs.cache
+H:\AdminTools\api\obj\Debug\netcoreapp2.0\api.AssemblyInfoInputs.cache
+H:\AdminTools\api\obj\Debug\netcoreapp2.0\api.AssemblyInfo.cs
+H:\AdminTools\api\obj\Debug\netcoreapp2.0\api.dll
+H:\AdminTools\api\obj\Debug\netcoreapp2.0\api.pdb

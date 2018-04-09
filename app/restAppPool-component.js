@@ -30,9 +30,10 @@ Vue.component('reset-app-pool', {
                                             <b>App Pool:</b> <span>{{pool.ApplicationPool}}</span>
                                         </div>
                                         <div class="two columns">
-                                            <span class="Stop" title="Stop" @click="stop(pool.ApplicationPool)"></span>
-                                            <span class="Start" title="Start" @click="start(pool.ApplicationPool)"></span>
-                                            <span class="Recycle" title="Recycle" @click="recycle(pool.ApplicationPool)"></span>
+                                            <span class="Stop" title="Stop" @click="stop(pool.ApplicationPool,group.servers)"></span>
+                                            <span class="Start" title="Start" @click="start(pool.ApplicationPool,group.servers)"></span>
+                                            <span class="Recycle" title="Recycle" @click="recycle(pool.ApplicationPool,group.servers)"></span>
+                                            <span class="Recycle" title="Refresh Status" @click="refresh(pool.ApplicationPool,group.servers)"></span>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -55,7 +56,6 @@ Vue.component('reset-app-pool', {
     computed: {
         filteredList: function () {
             var result = cloneDeep(this.webFarm);
-
             if (this.search) {
                 let sv = this.search.toLowerCase()
                 result = result.filter(e => {
@@ -71,18 +71,8 @@ Vue.component('reset-app-pool', {
                     })
                 });
             }
-
             return result
-            //     .sort((a,b)=>{
-            //     var compA = `${a.SiteName}${a.Path}`;
-            //     var compB = `${b.SiteName}${b.Path}`;
-            //     if(compA < compB) return -1;
-            //     if(compA > compB) return 1;
-            //     return 0;
-            // });
         }
-
-
     },
     created: function () {
         var dc = require("./dataLayer");
@@ -115,8 +105,11 @@ Vue.component('reset-app-pool', {
         start(pool){
 
         },
-        recycle(pool){
-
+        recycle(pool,servers){
+            var ps = require("./powershellAccess")
+            ps.recycleAppPool(pool,servers,this.user,this.pass,e =>{
+                alert("Recycled " + e)
+            })
         }
     }
 })
