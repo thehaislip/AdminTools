@@ -6,7 +6,7 @@ namespace api.Controllers
     [Route("api/[controller]")]
     public class ServerController : Controller
     {
-        // GET api/contacts
+        // GET api/server
         [HttpGet]
         public IActionResult Get()
         {
